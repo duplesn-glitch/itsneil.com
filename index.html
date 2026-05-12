@@ -58,7 +58,7 @@ nav{
   order:-1;width:100%;height:55vw;min-height:260px;max-height:420px;
   position:relative;overflow:hidden;background:var(--cream2);flex-shrink:0;
 }
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .hero-photo::after{
   content:"";position:absolute;inset:0;
   box-shadow:inset 0 0 60px rgba(0,0,0,0.18),inset 0 -40px 60px rgba(0,0,0,0.14);
@@ -255,6 +255,7 @@ footer{
     display:grid;grid-template-columns:1fr 1fr;
   }
   .hero-photo{order:0;height:auto;max-height:none;width:auto}
+  .hero-photo img{object-position:center 12%}
   .hero-content{padding:6rem 4rem}
   .hero-headline{font-size:3.8rem}
   .hero-ctas{flex-direction:row;flex-wrap:wrap}
@@ -306,7 +307,7 @@ footer{
       <div class="modal-success-icon">&#10003;</div>
       <div class="modal-success-title">You're all set</div>
       <p class="modal-success-text">Tap the button below to open your copy of Neil's resume.</p>
-      <a href="./Neil_Du_Plessis_Resume.pdf" target="_blank" class="modal-download-btn">Open Resume PDF</a>
+      <a href="https://drive.google.com/file/d/1CGjck7wc2RuWSR42mvMFLWrZaag6ekSR/preview" target="_blank" class="modal-download-btn">Open Resume PDF</a>
     </div>
   </div>
 </div>
