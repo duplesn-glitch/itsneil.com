@@ -16,30 +16,43 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);font-size:16px;line-height:1.6}
 
-/* ── NAV ── */
+/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   display:flex;align-items:center;justify-content:space-between;
   padding:0 1.5rem;height:64px;
-  background:rgba(250,248,244,0.96);backdrop-filter:blur(12px);
+  background:#FAF8F4;
   border-bottom:1px solid var(--border);
 }
-.nav-logo{font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:.02em;color:var(--text);text-decoration:none;z-index:201}
+.nav-logo{font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:.02em;color:var(--text);text-decoration:none;z-index:201;position:relative}
 .nav-links{
-  display:none;position:fixed;top:64px;left:0;right:0;bottom:0;
-  background:var(--cream);flex-direction:column;align-items:center;
-  justify-content:center;gap:2.5rem;z-index:200;
+  display:none;
+  position:fixed;
+  top:64px;left:0;right:0;bottom:0;
+  background:#FAF8F4;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2.5rem;
+  z-index:199;
+  padding:2rem 2rem 4rem;
 }
 .nav-links.open{display:flex}
-.nav-links a{font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;font-weight:400;color:var(--text2);text-decoration:none;transition:color .2s}
+.nav-links a{
+  font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:400;color:var(--text2);text-decoration:none;transition:color .2s;
+}
 .nav-links a:hover{color:var(--green)}
-.hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:201}
+.hamburger{
+  display:flex;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:6px;z-index:201;position:relative;
+}
 .hamburger span{display:block;width:22px;height:2px;background:var(--text);transition:all .3s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-/* ── HERO ── */
+/* HERO */
 .hero{display:flex;flex-direction:column;padding-top:64px;min-height:100svh}
 .hero-photo{
   order:-1;width:100%;height:55vw;min-height:260px;max-height:420px;
@@ -58,10 +71,7 @@ nav{
   display:flex;align-items:center;gap:.65rem;
 }
 .hero-eyebrow::before{content:"";display:block;width:1.5rem;height:1px;background:var(--green)}
-.hero-headline{
-  font-family:var(--serif);font-size:2.75rem;line-height:1.1;
-  font-weight:500;color:var(--dark);margin-bottom:1.25rem;
-}
+.hero-headline{font-family:var(--serif);font-size:2.75rem;line-height:1.1;font-weight:500;color:var(--dark);margin-bottom:1.25rem}
 .hero-headline em{font-style:italic;color:var(--green)}
 .hero-sub{font-size:.95rem;color:var(--text2);line-height:1.75;margin-bottom:2rem;font-weight:300}
 .hero-ctas{display:flex;flex-direction:column;gap:.85rem;align-items:flex-start}
@@ -89,17 +99,14 @@ nav{
 .btn-text:hover{color:var(--green)}
 .btn-text::before{content:"↓";font-size:.9rem}
 
-/* ── STRIP ── */
+/* STRIP */
 .strip{background:var(--dark);color:white}
-.strip-item{
-  padding:2.25rem 1.5rem;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
+.strip-item{padding:2.25rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.08)}
 .strip-item:last-child{border-bottom:none}
 .strip-label{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green-mid);font-weight:500;margin-bottom:.65rem}
 .strip-text{font-family:var(--serif);font-size:1.3rem;line-height:1.4;font-weight:400;color:rgba(255,255,255,.9)}
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section{padding:4rem 1.5rem}
 .section-label{
   font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;
@@ -107,12 +114,9 @@ section{padding:4rem 1.5rem}
   display:flex;align-items:center;gap:.65rem;
 }
 .section-label::before{content:"";display:block;width:1.25rem;height:1px;background:var(--green)}
-.section-headline{
-  font-family:var(--serif);font-size:2rem;line-height:1.18;
-  font-weight:500;color:var(--dark);margin-bottom:2.5rem;
-}
+.section-headline{font-family:var(--serif);font-size:2rem;line-height:1.18;font-weight:500;color:var(--dark);margin-bottom:2.5rem}
 
-/* ── EXPERTISE ── */
+/* EXPERTISE */
 .expertise-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
 .expertise-card{background:var(--cream);padding:1.75rem 1.5rem;transition:background .2s}
 .expertise-card:hover{background:var(--green-light)}
@@ -120,7 +124,7 @@ section{padding:4rem 1.5rem}
 .expertise-title{font-size:.9rem;font-weight:500;color:var(--dark);margin-bottom:.45rem}
 .expertise-desc{font-size:.82rem;color:var(--text2);line-height:1.65}
 
-/* ── IMPACT ── */
+/* IMPACT */
 .impact{background:var(--cream2)}
 .impact-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border)}
 .impact-stat{padding:2rem 1.25rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -129,7 +133,7 @@ section{padding:4rem 1.5rem}
 .stat-num{font-family:var(--serif);font-size:2.6rem;font-weight:500;color:var(--green);line-height:1;margin-bottom:.6rem}
 .stat-label{font-size:.78rem;color:var(--text2);line-height:1.5}
 
-/* ── ABOUT ── */
+/* ABOUT */
 .about{background:var(--cream);padding:0}
 .about-photo{position:relative;width:100%;height:70vw;max-height:420px;overflow:hidden}
 .about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
@@ -138,7 +142,7 @@ section{padding:4rem 1.5rem}
 .about-body p{margin-bottom:1.1rem}
 .about-signature{font-family:var(--serif);font-size:1.5rem;font-style:italic;color:var(--green);margin-top:1.75rem}
 
-/* ── OPPORTUNITIES ── */
+/* OPPORTUNITIES */
 .opportunities{background:var(--dark);color:white}
 .opportunities .section-label{color:var(--green-mid)}
 .opportunities .section-label::before{background:var(--green-mid)}
@@ -150,7 +154,7 @@ section{padding:4rem 1.5rem}
 .opp-desc{font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.65}
 .opp-tag{display:inline-block;margin-top:.75rem;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-mid);border:1px solid var(--green-mid);padding:.18rem .55rem}
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact{background:var(--green);color:white;text-align:center;padding:5rem 1.5rem}
 .contact-headline{font-family:var(--serif);font-size:2.4rem;font-weight:500;line-height:1.15;margin-bottom:1rem;color:white}
 .contact-sub{font-size:.95rem;color:rgba(255,255,255,.78);margin-bottom:2rem;font-weight:300;line-height:1.7}
@@ -165,41 +169,66 @@ section{padding:4rem 1.5rem}
 .contact-link.filled{background:white;color:var(--green);font-weight:500}
 .contact-link.filled:hover{background:rgba(255,255,255,.9)}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{
   background:var(--dark2);color:rgba(255,255,255,.35);
   display:flex;flex-direction:column;align-items:center;gap:.5rem;
   padding:1.5rem;font-size:.68rem;letter-spacing:.05em;text-align:center;
 }
 
-/* ── MODAL ── */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:999;align-items:flex-end;justify-content:center}
+/* MODAL */
+.modal-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,0.65);z-index:999;
+  align-items:flex-end;justify-content:center;
+}
 .modal-overlay.active{display:flex}
 .modal{
-  background:var(--cream);width:100%;max-width:100%;
+  background:var(--cream);width:100%;
   padding:2.25rem 1.5rem 2.5rem;position:relative;
   max-height:90svh;overflow-y:auto;
   border-radius:12px 12px 0 0;
 }
-.modal-close{position:absolute;top:1rem;right:1.25rem;background:none;border:none;font-size:1.5rem;color:var(--text3);cursor:pointer;line-height:1;font-family:var(--sans)}
+.modal-close{
+  position:absolute;top:1rem;right:1.25rem;
+  background:none;border:none;font-size:1.5rem;
+  color:var(--text3);cursor:pointer;line-height:1;font-family:var(--sans);
+}
 .modal-eyebrow{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green);font-weight:500;margin-bottom:.65rem;display:flex;align-items:center;gap:.6rem}
 .modal-eyebrow::before{content:"";display:block;width:1.25rem;height:1px;background:var(--green)}
 .modal-headline{font-family:var(--serif);font-size:1.75rem;font-weight:500;color:var(--dark);margin-bottom:.5rem;line-height:1.15}
 .modal-sub{font-size:.82rem;color:var(--text2);margin-bottom:1.75rem;line-height:1.6;font-weight:300}
 .modal-field{margin-bottom:1rem}
 .modal-field label{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);font-weight:500;margin-bottom:.4rem}
-.modal-field input{width:100%;padding:.78rem 1rem;border:1px solid var(--border);background:white;font-family:var(--sans);font-size:.95rem;color:var(--text);outline:none;transition:border-color .2s;border-radius:0}
+.modal-field input{
+  width:100%;padding:.78rem 1rem;border:1px solid var(--border);
+  background:white;font-family:var(--sans);font-size:.95rem;
+  color:var(--text);outline:none;transition:border-color .2s;border-radius:0;
+  -webkit-appearance:none;
+}
 .modal-field input:focus{border-color:var(--green)}
-.modal-submit{width:100%;padding:.9rem;background:var(--dark);color:white;border:none;font-family:var(--sans);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;cursor:pointer;margin-top:.5rem;transition:background .2s}
+.modal-submit{
+  width:100%;padding:.9rem;background:var(--dark);color:white;border:none;
+  font-family:var(--sans);font-size:.75rem;letter-spacing:.08em;
+  text-transform:uppercase;font-weight:500;cursor:pointer;margin-top:.5rem;
+  transition:background .2s;-webkit-appearance:none;border-radius:0;
+}
 .modal-submit:hover{background:var(--green)}
 .modal-submit:disabled{opacity:.5;cursor:not-allowed}
-.modal-success{display:none;text-align:center;padding:1rem 0}
-.modal-success-icon{font-size:2rem;margin-bottom:1rem;color:var(--green)}
+.modal-success{display:none;text-align:center;padding:1.5rem 0}
+.modal-success-icon{font-size:2.5rem;margin-bottom:.75rem;color:var(--green)}
 .modal-success-title{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:var(--dark);margin-bottom:.6rem}
-.modal-success-text{font-size:.84rem;color:var(--text2);line-height:1.65;font-weight:300}
+.modal-success-text{font-size:.84rem;color:var(--text2);line-height:1.65;font-weight:300;margin-bottom:1.75rem}
+.modal-download-btn{
+  display:inline-block;padding:.9rem 2rem;background:var(--dark);color:white;
+  text-decoration:none;font-family:var(--sans);font-size:.75rem;
+  letter-spacing:.08em;text-transform:uppercase;font-weight:500;
+  transition:background .2s;
+}
+.modal-download-btn:hover{background:var(--green)}
 .modal-error{display:none;font-size:.78rem;color:#c0392b;margin-top:.75rem;text-align:center}
 
-/* ── TABLET (640px+) ── */
+/* TABLET 640px+ */
 @media(min-width:640px){
   .hero-photo{height:45vw;max-height:480px}
   .expertise-grid{grid-template-columns:repeat(2,1fr)}
@@ -211,22 +240,21 @@ footer{
   footer{flex-direction:row;justify-content:space-between;padding:1.5rem 3rem}
 }
 
-/* ── DESKTOP (1024px+) ── */
+/* DESKTOP 1024px+ */
 @media(min-width:1024px){
   nav{padding:0 4rem;height:72px}
   .hamburger{display:none}
   .nav-links{
-    display:flex;position:static;flex-direction:row;
-    background:none;gap:2.5rem;
+    display:flex;position:static;
+    flex-direction:row;background:none;
+    gap:2.5rem;padding:0;
   }
   .nav-links a{font-size:.75rem}
   .hero{
     flex-direction:row;min-height:100vh;padding-top:72px;
     display:grid;grid-template-columns:1fr 1fr;
   }
-  .hero-photo{
-    order:0;height:auto;max-height:none;width:auto;
-  }
+  .hero-photo{order:0;height:auto;max-height:none;width:auto}
   .hero-content{padding:6rem 4rem}
   .hero-headline{font-size:3.8rem}
   .hero-ctas{flex-direction:row;flex-wrap:wrap}
@@ -253,31 +281,32 @@ footer{
 </head>
 <body>
 
-<!-- RESUME MODAL -->
+<!-- MODAL -->
 <div class="modal-overlay" id="resumeModal">
   <div class="modal">
     <button class="modal-close" id="modalClose">&times;</button>
     <div id="modalForm">
       <div class="modal-eyebrow">Resume</div>
       <h2 class="modal-headline">Download my resume</h2>
-      <p class="modal-sub">Enter your details below — the PDF will download automatically.</p>
+      <p class="modal-sub">Enter your details below to access the PDF.</p>
       <form id="resumeForm">
         <div class="modal-field">
           <label for="fname">Your name</label>
-          <input type="text" id="fname" name="name" placeholder="Jane Smith" required>
+          <input type="text" id="fname" name="name" placeholder="Jane Smith" required autocomplete="name">
         </div>
         <div class="modal-field">
           <label for="femail">Your email</label>
-          <input type="email" id="femail" name="email" placeholder="jane@company.com" required>
+          <input type="email" id="femail" name="email" placeholder="jane@company.com" required autocomplete="email">
         </div>
-        <button type="submit" class="modal-submit" id="modalSubmit">Download Resume</button>
+        <button type="submit" class="modal-submit" id="modalSubmit">Submit &amp; Download</button>
         <div class="modal-error" id="modalError">Something went wrong. Please try again.</div>
       </form>
     </div>
     <div class="modal-success" id="modalSuccess">
       <div class="modal-success-icon">&#10003;</div>
-      <div class="modal-success-title">Your download is starting</div>
-      <p class="modal-success-text">Thanks for your interest. If the download doesn't start automatically, <a href="./Neil_Du_Plessis_Resume.pdf" download style="color:var(--green)">click here</a>.</p>
+      <div class="modal-success-title">You're all set</div>
+      <p class="modal-success-text">Tap the button below to open your copy of Neil's resume.</p>
+      <a href="./Neil_Du_Plessis_Resume.pdf" target="_blank" class="modal-download-btn">Open Resume PDF</a>
     </div>
   </div>
 </div>
@@ -452,59 +481,69 @@ footer{
 
 <footer>
   <span>&#169; 2025 Neil Du Plessis</span>
-  <span>Los Angeles, CA &nbsp;&middot;&nbsp; (323) 236-4299</span>
+  <span>Los Angeles, CA</span>
 </footer>
 
 <script>
 // NAV
-var ham=document.getElementById('hamburger');
-var nav=document.getElementById('navLinks');
-ham.addEventListener('click',function(){
+var ham = document.getElementById('hamburger');
+var nav = document.getElementById('navLinks');
+ham.addEventListener('click', function() {
   ham.classList.toggle('open');
   nav.classList.toggle('open');
-  document.body.style.overflow=nav.classList.contains('open')?'hidden':'';
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
 });
-function closeNav(){
+function closeNav() {
   ham.classList.remove('open');
   nav.classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
 
 // MODAL
-function openModal(){document.getElementById('resumeModal').classList.add('active');document.body.style.overflow='hidden'}
-function closeModal(){
-  document.getElementById('resumeModal').classList.remove('active');
-  document.body.style.overflow='';
-  document.getElementById('resumeForm').reset();
-  document.getElementById('modalForm').style.display='block';
-  document.getElementById('modalSuccess').style.display='none';
-  document.getElementById('modalError').style.display='none';
-  document.getElementById('modalSubmit').disabled=false;
-  document.getElementById('modalSubmit').textContent='Download Resume';
+function openModal() {
+  document.getElementById('resumeModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
-document.getElementById('modalClose').addEventListener('click',closeModal);
-document.getElementById('resumeModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
-document.getElementById('resumeForm').addEventListener('submit',async function(e){
+function closeModal() {
+  document.getElementById('resumeModal').classList.remove('active');
+  document.body.style.overflow = '';
+  document.getElementById('resumeForm').reset();
+  document.getElementById('modalForm').style.display = 'block';
+  document.getElementById('modalSuccess').style.display = 'none';
+  document.getElementById('modalError').style.display = 'none';
+  document.getElementById('modalSubmit').disabled = false;
+  document.getElementById('modalSubmit').textContent = 'Submit & Download';
+}
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('resumeModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+document.getElementById('resumeForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  var btn=document.getElementById('modalSubmit');
-  var err=document.getElementById('modalError');
-  btn.disabled=true;btn.textContent='Sending...';err.style.display='none';
-  try{
-    var res=await fetch('https://formspree.io/f/maqvvyno',{
-      method:'POST',body:new FormData(this),
-      headers:{'Accept':'application/json'}
+  var btn = document.getElementById('modalSubmit');
+  var err = document.getElementById('modalError');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  err.style.display = 'none';
+  try {
+    var res = await fetch('https://formspree.io/f/maqvvyno', {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
     });
-    if(res.ok){
-      document.getElementById('modalForm').style.display='none';
-      document.getElementById('modalSuccess').style.display='block';
-      var a=document.createElement('a');
-      a.href='./Neil_Du_Plessis_Resume.pdf';
-      a.download='Neil_Du_Plessis_Resume.pdf';
-      document.body.appendChild(a);a.click();document.body.removeChild(a);
-    }else{
-      err.style.display='block';btn.disabled=false;btn.textContent='Download Resume';
+    if (res.ok) {
+      document.getElementById('modalForm').style.display = 'none';
+      document.getElementById('modalSuccess').style.display = 'block';
+    } else {
+      err.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Submit & Download';
     }
-  }catch(ex){err.style.display='block';btn.disabled=false;btn.textContent='Download Resume'}
+  } catch(ex) {
+    err.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Submit & Download';
+  }
 });
 </script>
 </body>
