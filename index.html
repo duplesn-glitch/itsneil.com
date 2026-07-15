@@ -125,15 +125,6 @@ section{padding:4rem 1.5rem}
 .expertise-title{font-size:.9rem;font-weight:500;color:var(--dark);margin-bottom:.45rem}
 .expertise-desc{font-size:.82rem;color:var(--text2);line-height:1.65}
 
-/* IMPACT */
-.impact{background:var(--cream2)}
-.impact-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border)}
-.impact-stat{padding:2rem 1.25rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
-.impact-stat:nth-child(2n){border-right:none}
-.impact-stat:nth-last-child(-n+2){border-bottom:none}
-.stat-num{font-family:var(--serif);font-size:2.6rem;font-weight:500;color:var(--green);line-height:1;margin-bottom:.6rem}
-.stat-label{font-size:.78rem;color:var(--text2);line-height:1.5}
-
 /* ABOUT */
 .about{background:var(--cream);padding:0}
 .about-photo{position:relative;width:100%;height:70vw;max-height:420px;overflow:hidden}
@@ -267,11 +258,6 @@ footer{
   .section-headline{font-size:2.6rem;margin-bottom:3.5rem}
   .expertise-grid{grid-template-columns:repeat(3,1fr)}
   .expertise-card{padding:2.25rem 2rem}
-  .impact-grid{grid-template-columns:repeat(4,1fr)}
-  .impact-stat{border-bottom:none}
-  .impact-stat:nth-child(2n){border-right:1px solid var(--border)}
-  .impact-stat:last-child{border-right:none}
-  .stat-num{font-size:3.2rem}
   .about{display:grid;grid-template-columns:1fr 1fr}
   .about-photo{height:auto;max-height:none;width:auto}
   .about-content{padding:6rem 4.5rem}
@@ -319,7 +305,6 @@ footer{
   <div class="nav-links" id="navLinks">
     <a href="#about" onclick="closeNav()">About</a>
     <a href="#expertise" onclick="closeNav()">Expertise</a>
-    <a href="#impact" onclick="closeNav()">Impact</a>
     <a href="#opportunities" onclick="closeNav()">Opportunities</a>
     <a href="#contact" onclick="closeNav()">Connect</a>
   </div>
@@ -333,7 +318,7 @@ footer{
   <div class="hero-content">
     <div class="hero-eyebrow">Strategic Operator</div>
     <h1 class="hero-headline">Where strategy<br>meets <em>execution</em></h1>
-    <p class="hero-sub">Global executive with 13+ years turning organizational complexity into commercial performance — across digital transformation, operational strategy, and international growth.</p>
+    <p class="hero-sub">Global executive with 13+ years scaling ecommerce and digital commerce businesses — turning organizational complexity into commercial performance across platforms, customer experience, and international growth.</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">Get in Touch</a>
       <div class="btn-row">
@@ -351,7 +336,7 @@ footer{
 <div class="strip">
   <div class="strip-item">
     <div class="strip-label">What I do</div>
-    <div class="strip-text">Build commercial clarity in complex, fast-moving organizations</div>
+    <div class="strip-text">Build and scale ecommerce and digital commerce businesses end to end</div>
   </div>
   <div class="strip-item">
     <div class="strip-label">How I operate</div>
@@ -359,7 +344,7 @@ footer{
   </div>
   <div class="strip-item">
     <div class="strip-label">Where I add value</div>
-    <div class="strip-text">Transformation, growth, turnarounds, and operational optimization</div>
+    <div class="strip-text">Digital growth, customer experience, and commercial operations</div>
   </div>
 </div>
 
@@ -370,57 +355,33 @@ footer{
   <div class="expertise-grid">
     <div class="expertise-card">
       <div class="expertise-number">01</div>
+      <div class="expertise-title">Ecommerce &amp; Digital Commerce</div>
+      <div class="expertise-desc">End-to-end ownership of digital storefronts, platforms, and channels — from merchandising and CX to checkout, retention, and revenue growth.</div>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-number">02</div>
       <div class="expertise-title">Commercial Strategy</div>
       <div class="expertise-desc">P&amp;L ownership, revenue architecture, and growth strategy across global and multi-market operations.</div>
     </div>
     <div class="expertise-card">
-      <div class="expertise-number">02</div>
+      <div class="expertise-number">03</div>
+      <div class="expertise-title">Customer Experience &amp; Growth</div>
+      <div class="expertise-desc">Using data, UX, and paid and organic channels together to grow acquisition, conversion, and lifetime value.</div>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-number">04</div>
       <div class="expertise-title">Organizational Transformation</div>
       <div class="expertise-desc">Restructuring teams, redesigning systems, and leading change with executive alignment and minimal friction.</div>
     </div>
     <div class="expertise-card">
-      <div class="expertise-number">03</div>
-      <div class="expertise-title">Digital Operations</div>
-      <div class="expertise-desc">Building and scaling digital infrastructure — from platform strategy to CX, UX, analytics, and technology integration.</div>
-    </div>
-    <div class="expertise-card">
-      <div class="expertise-number">04</div>
+      <div class="expertise-number">05</div>
       <div class="expertise-title">Executive Communication</div>
       <div class="expertise-desc">Translating operational complexity into board-level narrative. Data storytelling that drives decisions, not just reports.</div>
-    </div>
-    <div class="expertise-card">
-      <div class="expertise-number">05</div>
-      <div class="expertise-title">Operational Design</div>
-      <div class="expertise-desc">Pattern recognition at the system level — identifying inefficiencies, redesigning processes, and building scalable operating models.</div>
     </div>
     <div class="expertise-card">
       <div class="expertise-number">06</div>
       <div class="expertise-title">Cross-functional Leadership</div>
       <div class="expertise-desc">Leading distributed global teams across time zones, cultures, and disciplines — with clarity, accountability, and commercial focus.</div>
-    </div>
-  </div>
-</section>
-
-<!-- IMPACT -->
-<section class="impact" id="impact">
-  <div class="section-label">Selected Impact</div>
-  <h2 class="section-headline">Outcomes, not just activities</h2>
-  <div class="impact-grid">
-    <div class="impact-stat">
-      <div class="stat-num">+22%</div>
-      <div class="stat-label">Global ecommerce revenue growth year-over-year</div>
-    </div>
-    <div class="impact-stat">
-      <div class="stat-num">+97%</div>
-      <div class="stat-label">Paid media revenue increase through commercial strategy</div>
-    </div>
-    <div class="impact-stat">
-      <div class="stat-num">1800<span style="font-size:1.6rem">bps</span></div>
-      <div class="stat-label">Freight cost improvement through operational optimization</div>
-    </div>
-    <div class="impact-stat">
-      <div class="stat-num">80+</div>
-      <div class="stat-label">NPS maintained across global customer operations</div>
     </div>
   </div>
 </section>
@@ -434,7 +395,7 @@ footer{
     <div class="section-label">About Neil</div>
     <h2 class="section-headline" style="font-size:2rem;margin-bottom:1.5rem">A commercial operator who thinks like a strategist</h2>
     <div class="about-body">
-      <p>I've spent 13+ years leading global organizations through complexity — not just executing playbooks, but building the systems, teams, and strategic clarity that make performance sustainable.</p>
+      <p>I've spent 13+ years building and leading ecommerce and digital commerce businesses — not just executing playbooks, but building the systems, teams, and strategic clarity that make performance sustainable.</p>
       <p>My background spans digital commerce, organizational transformation, and operational strategy across APAC, EMEA, North America, and South Africa. I operate best where the problems are real, the stakes are high, and conventional wisdom has stopped working.</p>
       <p>I'm equally comfortable translating vision downward into operating reality, and translating ground-level complexity upward into executive decision-making. That bridge is rare — and it's where I tend to create the most value.</p>
     </div>
@@ -448,8 +409,8 @@ footer{
   <h2 class="section-headline">Where my profile creates the most value</h2>
   <div class="opp-grid">
     <div class="opp-card">
-      <div class="opp-title">Private Equity Portfolio Operations</div>
-      <div class="opp-desc">Operating Partner or Portfolio Transformation lead — applying commercial and operational pattern recognition to drive value creation across portfolio companies.</div>
+      <div class="opp-title">Ecommerce &amp; Digital Commerce Leadership</div>
+      <div class="opp-desc">Head of Ecommerce, VP Digital, or CCO roles — owning the full digital P&amp;L across platform, CX, growth, and operations for scaling or global brands.</div>
       <span class="opp-tag">Strong Fit</span>
     </div>
     <div class="opp-card">
@@ -466,6 +427,11 @@ footer{
       <div class="opp-title">AI &amp; Emerging Industry Transformation</div>
       <div class="opp-desc">Bringing commercial and operational discipline to industries undergoing significant digital or structural change — AI, autonomous systems, or high-growth technology.</div>
       <span class="opp-tag">Interested</span>
+    </div>
+    <div class="opp-card">
+      <div class="opp-title">Private Equity Portfolio Operations</div>
+      <div class="opp-desc">Operating Partner or Portfolio Transformation lead — applying commercial and digital operating experience to drive value creation across portfolio companies.</div>
+      <span class="opp-tag">Open To</span>
     </div>
   </div>
 </section>
